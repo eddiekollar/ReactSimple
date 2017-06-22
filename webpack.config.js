@@ -15,7 +15,7 @@ webpackConfig = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[hash].js'
   },
   module: {
     rules: [
@@ -49,8 +49,19 @@ webpackConfig = {
       'process.env.': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       }
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ]
 };
+
+if(!production) {
+  webpackConfig.devServer = {
+    host: process.env.BIND || '127.0.0.1',
+    port: '8080',
+    headers: { 'Access-Control-Allow-Origin': '*' }
+  };
+  // Source maps
+  webpackConfig.devtool = 'inline-source-map';
+}
 
 module.exports = webpackConfig;
