@@ -5,8 +5,9 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 var src_dir = __dirname + '/src';
 
-var VENDOR_LIBS = ['lodash', 'react', 'prop-types', 'react-dom', 'react-router', 'react-redux', 'redux',
-                   'redux-form', 'redux-promise', 'redux-thunk'];
+var VENDOR_LIBS = ['lodash', 'react', 'react-dom' ];
+
+var production = process.env.NODE_ENV === 'production';
 
 webpackConfig = {
   entry: {

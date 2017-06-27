@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import Home from './Home';
 
 class App extends Component {
   render() {
-    console.log(this.props);
     return (
       <div>
-          <h2>Welcome to React Boiler</h2>
+          <h2>Welcome to React Simple</h2>
         <p >
           To get started, edit <code>src/components/App.js</code> or <code>src/components/Home.js</code> and save to reload.
         </p>
-        <div>{this.props.children}</div>
+        <Home />
       </div>
     );
   }

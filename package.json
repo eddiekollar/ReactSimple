@@ -1,9 +1,9 @@
 {
-  "name": "react-boiler",
+  "name": "react-simple",
   "version": "0.1.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "Simple starter package for React with Babel support",
   "main": "src/index.js",
-  "repository": "git@github.com:eddiekollar/ReactBoiler.git",
+  "repository": "git@github.com:eddiekollar/ReactSimple.git",
   "private": true,
   "dependencies": {
     "axios": "^0.16.1",
@@ -12,13 +12,7 @@
     "path": "^0.12.7",
     "prop-types": "^15.5.6",
     "react": "^15.6.1",
-    "react-dom": "^15.5.3",
-    "react-redux": "^5.0.4",
-    "react-router": "2.8.1",
-    "redux": "^3.6.0",
-    "redux-form": "^6.6.2",
-    "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.2.0",
+    "react-dom": "^15.6.1",
     "webpack": "^2.3.3"
   },
   "devDependencies": {
